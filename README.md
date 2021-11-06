@@ -1,7 +1,7 @@
   
 # ReadMe
 
-Memento mori is a side project I did just to kill time! Enjoy watching your weeks go by!
+Memento mori is a side project I did just to kill time. Enjoy watching your weeks go by!
 
 
 ## Prepare the content
@@ -14,11 +14,11 @@ This code is free, everyone can access it and use the calendar. It was developed
 2. What does it mean?
     - The grey squares represent the weeks you have left.
     - The black squares represent the weeks you spent. 
-    - It is only an aprroximation that goes to 80 years.
+    - It is only an aprroximation that goes up to 80 years.
     
 Ideas for future updates:
 
-- Separation for time slept/on school
+- Separation for time slept and on school
 - Specific dates on squares
 - Save domain where the app was used
 
