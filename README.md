@@ -4,7 +4,7 @@
 Memento mori is a side project I did just to kill time. Enjoy watching your weeks go by!
 
 
-## Prepare the content
+## About this
 
 This code is free, everyone can access it and use the calendar. It was developed using Bootstrap Studio, you can use it for free at https://mementomori.bss.design/
 
