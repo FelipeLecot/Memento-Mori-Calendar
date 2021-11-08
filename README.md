@@ -1,5 +1,5 @@
   
-# ReadMe
+# Memento Mori
 
 Memento mori is a side project I did just to kill time. Enjoy watching your weeks go by!
 
@@ -18,7 +18,7 @@ This code is free, everyone can access it and use the calendar. It was developed
     
 Ideas for future updates:
 
-- Separation for time slept and on school
+- Separation for time slept and at school
 - Specific dates on squares
 - Save domain where the app was used
 
