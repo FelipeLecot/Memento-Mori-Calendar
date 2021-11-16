@@ -13,13 +13,14 @@ This code is free, everyone can access it and use the calendar. It was developed
     - Press the black button.
 2. What does it mean?
     - The grey squares represent the weeks you have left.
-    - The black squares represent the weeks you spent. 
+    - The black squares represent the weeks you have spent. 
     - It is only an aprroximation that goes up to 80 years.
     
 Ideas for future updates:
 
 - Separation for time slept and at school
-- Specific dates on squares
+- Better split to represent different amounts of time
+- Dates on squares
 - Save domain where the app was used
 
 
