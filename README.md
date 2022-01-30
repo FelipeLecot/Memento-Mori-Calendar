@@ -1,7 +1,7 @@
   
 # Memento Mori
 
-Memento mori is a side project I did just to kill time. Enjoy watching your weeks go by!
+Memento Mori is a side project I did just to kill time. Enjoy watching your weeks go by!
 
 
 ## About this
