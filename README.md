@@ -6,7 +6,7 @@ Memento Mori is a side project I did just to kill time. Enjoy watching your week
 
 ## About this
 
-This code is free, everyone can access it and use the calendar. It was developed using Bootstrap Studio, you can use it for free at https://mementomori.bss.design/
+This code is free, everyone can access it and use the calendar. It was developed using Bootstrap Studio, you can use it for free at https://mementomori.do2software.com/
 
 How do I use it?
     - Insert your birth date on the input box.
@@ -18,11 +18,9 @@ What does it mean?
     
 Ideas for future updates:
 
-- Separation for time slept and at school
+- Separation for time slept
 - Better split to represent different amounts of time
 - Dates on squares
-- Save domain where the app was used
-
 
 ### References
 
