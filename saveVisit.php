@@ -1,6 +1,6 @@
 <?php
 	header('Access-Control-Allow-Origin: *');
-	include 'Login.php';
+	include 'login.php';
 
 	$connect = mysqli_connect($host, $db_username, $db_password, $db_name);
 
