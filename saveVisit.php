@@ -4,16 +4,13 @@
 
 	$connect = mysqli_connect($host, $db_username, $db_password, $db_name);
 
-	
-	$_SERVER['REMOTE_ADDR'];
-
 	// {"data": {"date": {"ip": "", "ip2": ""}}}
 
 
 	function addVisitToTotalCount() {
 		global $connect;
-		function getCurrentVisitData($connect) {
 
+		function getCurrentVisitData($connect) {
 			$query = "SELECT * FROM mementoMoriUserCount WHERE 1 = 1";
 
 			$result = mysqli_query($connect, $query);
@@ -23,17 +20,31 @@
 			}
 		}
 
-		function addNewUniqueVisit() {
-			$query = "UPDATE mementoMoriUserCount SET uniqueVisitNumber = visitNumber + 1";
+		function addNewUniqueVisit($connect) {
+			$query = "UPDATE mementoMoriUserCount SET uniqueVisitNumber = uniqueVisitNumber + 1";
 	
 			$result = mysqli_query($connect, $query);
 		}
 
 		$currentVisitData = getCurrentVisitData($connect);
+		$today = date('d-m-Y');
+		$userIp = $_SERVER['REMOTE_ADDR'];
 
-		if ($currentRque)
+		if (!isset($currentVisitData[$today])) {
+			$currentVisitData[$today] = array();
+		}
 
-		$query = "UPDATE mementoMoriUserCount SET visitData = $newVisitData + 1";
+		if (isset($currentVisitData[$today][$userIp])) {
+			$currentVisitData[$today][$userIp] ++;
+		}
+		else {
+			$currentVisitData[$today][$userIp] = 1;
+			addNewUniqueVisit($connect);
+		}
+
+		$newVisitData = json_encode($currentVisitData, true);
+
+		$query = "UPDATE mementoMoriUserCount SET visitData = '$newVisitData'";
 
 		$result = mysqli_query($connect, $query);
 	}
