@@ -30,6 +30,8 @@
 		$today = date('d-m-Y');
 		$userIp = $_SERVER['REMOTE_ADDR'];
 
+		// Only takes unique visitors from the same day, issue is that the same ip may already be listed
+
 		if (!isset($currentVisitData[$today])) {
 			$currentVisitData[$today] = array();
 		}
