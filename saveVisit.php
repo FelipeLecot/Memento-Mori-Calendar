@@ -30,17 +30,16 @@
 		$today = date('d-m-Y');
 		$userIp = $_SERVER['REMOTE_ADDR'];
 
-		// Only takes unique visitors from the same day, issue is that the same ip may already be listed
-
-		if (!isset($currentVisitData[$today])) {
-			$currentVisitData[$today] = array();
+		if (!isset($currentVisitData[$userIp])) {
+			$currentVisitData[$userIp] = array('total' => 0);
 		}
 
-		if (isset($currentVisitData[$today][$userIp])) {
-			$currentVisitData[$today][$userIp] ++;
+		if (isset($currentVisitData[$userIp][$today])) {
+			$currentVisitData[$userIp][$today] ++;
+			$currentVisitData[$userIp]['total'] ++;
 		}
 		else {
-			$currentVisitData[$today][$userIp] = 1;
+			$currentVisitData[$userIp][$today] = 1;
 			addNewUniqueVisit($connect);
 		}
 
