@@ -4,9 +4,6 @@
 
 	$connect = mysqli_connect($host, $db_username, $db_password, $db_name);
 
-	// {"data": {"date": {"ip": "", "ip2": ""}}}
-
-
 	function addVisitToTotalCount() {
 		global $connect;
 
@@ -31,7 +28,7 @@
 		$userIp = $_SERVER['REMOTE_ADDR'];
 
 		if (!isset($currentVisitData[$userIp])) {
-			$currentVisitData[$userIp] = array('total' => 0);
+			$currentVisitData[$userIp] = array('total' => 1);
 		}
 
 		if (isset($currentVisitData[$userIp][$today])) {
