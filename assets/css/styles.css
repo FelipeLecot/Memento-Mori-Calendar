@@ -65,6 +65,9 @@ h1 {
   font-size: 18px;
   line-height: 1.6;
   margin-bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .footer-basic li {
