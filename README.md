@@ -6,7 +6,7 @@ Memento Mori is a side project I did just to kill time. Enjoy watching your week
 
 ## About this
 
-This code is free, everyone can access it and use the calendar. It was developed using Bootstrap Studio, you can use it for free at https://mementomori.do2software.com/
+This code is free, everyone can access it and use the calendar. You can use it for free at https://mementomori.do2software.com/
 
 How do I use it?
     - Insert your birth date on the input box.
