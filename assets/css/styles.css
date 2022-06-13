@@ -72,13 +72,16 @@ h1 {
 }
 
 .footer-basic ul a {
-  color: inherit;
+  color: black;
   text-decoration: none;
-  opacity: 0.8;
+}
+
+.footer-basic img {
+  height: 3rem;
 }
 
 .footer-basic ul a:hover {
-  opacity: 1;
+  opacity: 0.8;
 }
 
 .footer-basic .social {
@@ -98,10 +101,6 @@ h1 {
   margin: 0 8px;
   color: inherit;
   opacity: 0.75;
-}
-
-.footer-basic .social > a:hover {
-  opacity: 0.9;
 }
 
 .footer-basic .copyright {
