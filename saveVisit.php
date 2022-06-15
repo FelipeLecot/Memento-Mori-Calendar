@@ -8,17 +8,17 @@
 		global $connect;
 
 		function getCurrentVisitData($connect) {
-			$query = "SELECT * FROM mementoMoriUserCount WHERE 1 = 1";
+			$query = "SELECT * FROM mementomori_user_data WHERE 1 = 1";
 
 			$result = mysqli_query($connect, $query);
 
 			if ($rows = mysqli_fetch_array($result)) {
-				return json_decode($rows['visitData'], true);
+				return json_decode($rows['data_visits'], true);
 			}
 		}
 
 		function addNewUniqueVisit($connect) {
-			$query = "UPDATE mementoMoriUserCount SET uniqueVisitNumber = uniqueVisitNumber + 1";
+			$query = "UPDATE mementomori_user_data SET unique_visits = unique_visits + 1";
 	
 			$result = mysqli_query($connect, $query);
 		}
@@ -42,7 +42,7 @@
 
 		$newVisitData = json_encode($currentVisitData, true);
 
-		$query = "UPDATE mementoMoriUserCount SET visitData = '$newVisitData'";
+		$query = "UPDATE mementomori_user_data SET data_visits = '$newVisitData'";
 
 		$result = mysqli_query($connect, $query);
 	}
@@ -50,7 +50,7 @@
 	function addVisitData() {
 		global $connect;
 
-		$query = "UPDATE mementoMoriUserCount SET visitNumber = visitNumber + 1";
+		$query = "UPDATE mementomori_user_data SET total_visits = total_visits + 1";
 
 		$result = mysqli_query($connect, $query);
 	}
