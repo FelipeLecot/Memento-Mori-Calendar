@@ -10,15 +10,18 @@ function startCalendar(weeksLived) {
 			weekCount++
 
 			let calendarWeekGroups = $("#weekGroups" + i)
-			calendarWeekGroups.append("<div class='weekSquare " + isPassed(weeksLived, weekCount) + "'></div>")
-
-			function isPassed(lived, count) {
-				if (count < lived) {
-					return "passedWeek";
-				}
-				return ""
-			}
+			calendarWeekGroups.append(`<div class="weekSquare ${checkForSpecialDates(weekCount, weeksLived)}"></div>`)
 		}
+	}
+
+	function checkForSpecialDates(weekCount, weeksLived) {
+		let classes = []
+
+		weekCount < weeksLived ? classes.push('passedWeek') : false
+
+		weekCount % 52 == 0 ? classes.push('birthDay') : false
+		
+		return classes.join(' ')
 	}
 }
 

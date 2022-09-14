@@ -27,6 +27,10 @@ h1 {
   background-color: black;
 }
 
+.birthDay {
+  background-color: goldenrod;
+}
+
 .container.inputs {
   padding: 16px;
   display: flex;
