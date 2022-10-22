@@ -31,6 +31,10 @@ h1 {
   background-color: goldenrod;
 }
 
+.currentWeek {
+  background-color: lightskyblue;
+}
+
 .container.inputs {
   padding: 16px;
   display: flex;
