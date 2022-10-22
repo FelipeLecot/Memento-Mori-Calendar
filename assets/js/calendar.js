@@ -21,29 +21,61 @@ function startCalendar(weeksLived) {
 
 		weekCount % 52 == 0 ? classes.push('birthDay') : false
 		
+		weekCount == weeksLived ? classes.push('currentWeek') : false
+		
 		return classes.join(' ')
 	}
 }
 
-($('.calculate-button').on('click', () => {
-	calculateDiffWeeks()
-}))
+$('.calculate-button').on('click', () => {
+	calculateDiffWeeks($("#birthDate").val())
+})
 
-function calculateDiffWeeks() {
-	let birthDate = moment(document.getElementById("birthDate").value,'YYYY/M/D');
+function calculateDiffWeeks(inputDate) {
+	let birthDate = moment(inputDate,'YYYY/M/D');
+	setCookie('birthDate', inputDate, 30)
 	let today = moment(moment().format("YYYY/M/D"),'YYYY/M/D');
 	let diffWeeks = today.diff(birthDate, 'weeks');
- 	$(".inputs").css("display", "none")
- 	startCalendar(diffWeeks)
+	$(".inputs").css("display", "none")
+	startCalendar(diffWeeks)
 
- 	$.ajax({
+	$.ajax({
 		type: "POST",
-	  	url: 'https://mementomori.do2software.com/saveVisit.php'
+		url: 'https://mementomori.do2software.com/saveVisit.php'
 	});
 }
 
+function setCookie(cname, cvalue, exdays) {
+    var d = new Date();
+    d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
+    var expires = "expires=" + d.toUTCString();
+    document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+}
+
+function getCookie(cname) {
+    var name = cname + "=";
+    var decodedCookie = decodeURIComponent(document.cookie);
+    var ca = decodedCookie.split(';');
+    for (var i = 0; i < ca.length; i++) {
+        var c = ca[i];
+        while (c.charAt(0) === ' ') {
+            c = c.substring(1);
+        }
+        if (c.indexOf(name) === 0) {
+            return c.substring(name.length, c.length);
+        }
+    }
+    return null;
+}
+
+$(window).ready(() => {
+	if (getCookie('birthDate') != null) {
+		calculateDiffWeeks(getCookie('birthDate'))
+	}
+})
+
 $('#birthDate').on('keypress', function (e) {
     if (e.key === 'Enter') {
-		calculateDiffWeeks()
+		calculateDiffWeeks($("#birthDate").val())
     }
 });
