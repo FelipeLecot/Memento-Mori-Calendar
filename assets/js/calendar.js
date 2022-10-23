@@ -34,7 +34,7 @@ function calculateDiffWeeks(inputDate) {
 	setCookie('birthDate', inputDate, 30)
 	let today = moment(moment().format("YYYY/M/D"),'YYYY/M/D');
 	let diffWeeks = today.diff(birthDate, 'weeks');
-	$("#birthDate").value(inputDate)
+	$("#birthDate").val(inputDate)
 	startCalendar(diffWeeks)
 
 	$.ajax({
