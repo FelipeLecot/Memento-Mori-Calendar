@@ -31,7 +31,7 @@ $('.calculate-button').on('click', () => {
 
 function calculateDiffWeeks(inputDate) {
 	let birthDate = moment(inputDate,'YYYY/M/D');
-	setCookie('birthDate', inputDate, 30)
+	setCookie('birthDate', inputDate, 365)
 	let today = moment(moment().format("YYYY/M/D"),'YYYY/M/D');
 	let diffWeeks = today.diff(birthDate, 'weeks');
 	$("#birthDate").val(inputDate)
