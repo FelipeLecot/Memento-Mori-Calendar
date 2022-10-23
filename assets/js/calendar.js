@@ -1,16 +1,14 @@
 function startCalendar(weeksLived) {
-	let calendarCont = $(".calendar-containers")
 		let weekCount = 0;
 
 	for (let i = 1; i <= 8; i++) {
-		calendarCont.append("<div id=weekGroups" + i + " class='week-groups'></div>")
+		$(".calendar-containers").append("<div id=weekGroups" + i + " class='week-groups'></div>")
 
 
 		for (let j = 1; j <= 520; j++) {
 			weekCount++
 
-			let calendarWeekGroups = $("#weekGroups" + i)
-			calendarWeekGroups.append(`<div class="weekSquare ${checkForSpecialDates(weekCount, weeksLived)}"></div>`)
+			$("#weekGroups" + i).append(`<div class="weekSquare ${checkForSpecialDates(weekCount, weeksLived)}"></div>`)
 		}
 	}
 
