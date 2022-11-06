@@ -1,5 +1,5 @@
 function startCalendar(weeksLived) {
-		let weekCount = 0;
+	let weekCount = 0;
 
 	for (let i = 1; i <= 8; i++) {
 		$(".calendar-containers").append("<div id=weekGroups" + i + " class='week-groups'></div>")
