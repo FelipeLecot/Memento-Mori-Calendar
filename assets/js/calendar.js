@@ -26,6 +26,7 @@ function startCalendar(weeksLived) {
 }
 
 $('.calculate-button').on('click', () => {
+	$('.week-groups').remove()
 	calculateDiffWeeks($("#birthDate").val())
 })
 
