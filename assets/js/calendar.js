@@ -37,11 +37,6 @@ function calculateDiffWeeks(inputDate) {
 	let diffWeeks = today.diff(birthDate, 'weeks');
 	$("#birthDate").val(inputDate)
 	startCalendar(diffWeeks)
-
-	$.ajax({
-		type: "POST",
-		url: 'https://mementomori.do2software.com/saveVisit.php'
-	});
 }
 
 function setCookie(cname, cvalue, exdays) {
