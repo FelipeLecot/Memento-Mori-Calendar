@@ -12,8 +12,11 @@ h1 {
   width: 100%;
 }
 
-.container.heading {
-  padding: 32px;
+.heading-logo {
+  width: 140px;
+  height: 140px;
+  padding: 20px;
+  box-sizing: border-box;
 }
 
 .weekSquare {
