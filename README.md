@@ -17,3 +17,4 @@ You can use it for free at https://mementomori.do2software.com/
 ## Ideas for future updates:
 - Separation for time slept
 - Dates on squares
+- Animate squares
