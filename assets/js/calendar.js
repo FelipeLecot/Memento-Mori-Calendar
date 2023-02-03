@@ -26,11 +26,11 @@ function startCalendar(weeksLived) {
 }
 
 $('.calculate-button').on('click', () => {
-	$('.week-groups').remove()
 	calculateDiffWeeks($("#birthDate").val())
 })
 
 function calculateDiffWeeks(inputDate) {
+	$('.week-groups').remove()
 	let birthDate = moment(inputDate,'YYYY/M/D');
 	setCookie('birthDate', inputDate, 365)
 	let today = moment(moment().format("YYYY/M/D"),'YYYY/M/D');
