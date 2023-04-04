@@ -21,6 +21,13 @@ h1 {
   box-sizing: border-box;
 }
 
+.quote-randomizer {
+  background: none;
+  color: black;
+  border: none;
+  box-shadow: none;
+}
+
 .weekSquare {
   background: rgb(150,150,150);
   width: 10px;
