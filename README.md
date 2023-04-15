@@ -12,7 +12,7 @@ You can use it for free at https://mementomori.felipelecot.com/
 ## What does it mean?
 - The grey squares represent the weeks you have left.
 - The black squares represent the weeks you have lived. 
-- It is only an aprroximation that goes up to 80 years.
+- It is only an approximation that goes up to 80 years.
     
 ## Ideas for future updates:
 - Separation for time slept
